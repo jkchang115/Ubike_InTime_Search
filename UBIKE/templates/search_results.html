@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>搜尋結果</title>
+</head>
+<body>
+
+    <h3>搜尋結果</h3>
+    <p>你搜尋的區域是: {{ query }}</p>
+
+    {% if results %}
+    <ul>
+        {% for result in results %}
+        <li>
+            站點編號: {{ result['index'] }}<br>
+            區域: {{ result['area'] }}<br>
+            地點: {{ result['location'] }}<br>
+            總車位數: {{ result['freetotal'] }}<br>
+            可歸還車輛數: {{ result['inoutfree'] }}<br>
+            更新時間: {{ result['time'] }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>未找到任何結果。</p>
+    {% endif %}
+
+</body>
+</html>

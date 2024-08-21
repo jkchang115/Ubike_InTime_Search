@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBIKE及時查詢</title>
+</head>
+<body>
+    <h1>UBIKE即時查詢</h1>
+    <p>Welcome to the UBike real-time search!</p>
+    <form action="/search" method="POST">
+        <input type="text" name="search" placeholder="輸入區域，例如：大安區">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBIKE即時查詢</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>UBIKE即時查詢</h1>
+    <p>歡迎使用 UBike 即時查詢！</p>
+
+    <div id="map"></div>
+    <form action="/search" method="POST">
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+        <button type="submit">搜尋附近站點</button>
+    </form>
+
+    <script>
+        let map, marker;
+
+        function initMap() {
+            const taipei = { lat: 25.0330, lng: 121.5654 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: taipei,
+                zoom: 12,
+            });
+
+            map.addListener("click", (e) => {
+                placeMarkerAndPanTo(e.latLng, map);
+            });
+        }
+
+        function placeMarkerAndPanTo(latLng, map) {
+            if (marker) {
+                marker.setPosition(latLng);
+            } else {
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                });
+            }
+
+            map.panTo(latLng);
+
+            document.getElementById('latitude').value = latLng.lat();
+            document.getElementById('longitude').value = latLng.lng();
+        }
+    </script>
+    
+    <!-- 使用你的 Google Maps API Key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzqXgQwAYzoW0IkimfSr0v2H09Wod1IbQ&callback=initMap" async defer></script>
+</body>
+</html>
