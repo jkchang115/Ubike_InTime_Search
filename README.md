@@ -94,11 +94,7 @@ The **Ubike InTime Search** system is designed to provide real-time information 
 2. **Searching for Ubike Stations**
    - Use the search feature on the homepage to find real-time information about Ubike stations.
 
-## API Endpoints
 
-- **GET /api/stations**: Returns a list of all Ubike stations.
-- **GET /api/stations/{id}**: Returns details of a specific Ubike station.
-- **POST /api/search**: Search for stations based on specific criteria (e.g., location, availability).
 
 ## Contributing
 
@@ -111,8 +107,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 - **Author**: Jack Chang
-- **Email**: your.email@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
+- **Email**: jkchang115@gmail.com
 
 ![image](https://github.com/user-attachments/assets/6b1d9c15-c0ef-49f5-b57c-3f556ad01144)
 
