@@ -7,19 +7,6 @@ Ubike InTime Search system
 
 The **Ubike InTime Search** system is designed to provide real-time information about Ubike stations, including the availability of bikes and parking spaces. This project is built using Flask for the backend and MSSQL as the database.
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## Features
 
 - Real-time search for Ubike stations.
