@@ -12,7 +12,7 @@ app = Flask('__main__')  # don't use system variable __name__
 SERVER='localhost'
 DATABASE='YouBike2DB'
 USERNAME='sa'
-PASSWORD='0972779027'
+PASSWORD='xxxxxx'
 APPICATION_NAME='acct'
 
 # 自訂函數 配合連接組態 產生connection object
