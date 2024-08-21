@@ -18,8 +18,7 @@ The **Ubike InTime Search** system is designed to provide real-time information 
 
 - **Backend**: Flask (Python)
 - **Database**: MSSQL
-- **Frontend**: (If applicable, mention any frontend technologies like Vue.js, React, etc.)
-- **Others**: (e.g., Docker, Nginx, etc.)
+
 
 ## Installation
 
